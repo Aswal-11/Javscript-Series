@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="cars"></p>
+
+    <p id="demo"></p>
+
+    <!-- array length -->
+     <p id="length"></p>
+
+    <script>
+
+        //Normal way to print the array
+        const cars = ['ford','volkwagen','bmw','Audi']
+        document.getElementById('cars').innerHTML= cars;
+
+        // Join the array itme with string
+        const fruits = ['Banana','Apple','Pineapple','Soya']
+        document.getElementById('demo').innerHTML= fruits.join('*');
+
+        // mesaaure the array length
+        document.getElementById('length').innerHTML = cars.length;
+    </script>
+</body>
+
+</html>
