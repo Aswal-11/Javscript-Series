@@ -16,6 +16,9 @@
     <!-- array length -->
      <p id="length"></p>
 
+    <!-- array list  -->
+     <p id="list"></p>
+
     <script>
 
         //Normal way to print the array
@@ -26,8 +29,20 @@
         const fruits = ['Banana','Apple','Pineapple','Soya']
         document.getElementById('demo').innerHTML= fruits.join('*');
 
-        // mesaaure the array length
+        // measure the array length
         document.getElementById('length').innerHTML = cars.length;
+
+        // Lopping over the array Elements
+        const places = ['Delhi', 'Punjab', 'Bihar', 'Haryana', 'Rajasthan']
+        let fplces = places.length;
+
+        let text = '<ul>';
+            for( let i =0 ; i<fplces ; i++){
+                text += '<li>'+ fruits[i]+ "</li>"
+            }
+            text += "</ul>"
+
+        document.getElementById("list").innerHTML = text;
     </script>
 </body>
 
