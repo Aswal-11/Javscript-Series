@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <p id="demo"> </p>
+    <script>
+      const places = ["Delhi", "Punjab", "Bihar", "Haryana", "Rajasthan"];
+
+      // we used the array here and passed the value of array in function one by one
+      // Dont learn the method just read it and use it when required
+      let text = '<ul>';
+        places.forEach(myfunction)
+        text += '</ul>'
+
+      function myfunction (value){
+        text += '<li>'+ value + '</li>'
+      }
+
+      document.getElementById('demo').innerHTML = text;
+    </script>
+  </body>
+</html>

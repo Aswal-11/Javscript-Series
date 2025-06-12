@@ -8,6 +8,7 @@
 <body>
 
     <p class="data"></p>
+    <p id="car_data"></p>
     <script>
         const arr = ['a','b','c'];
         const alen = arr.length;
@@ -19,6 +20,18 @@
         text += '</ul>'
         console.log('asdf')
         document.getElementsByClassName('data')[0].innerHTML = text
+
+
+        const car = ['ford', 'maruti', 'hero']
+
+        let car_data = '<ul>'
+            car.forEach(carfunction)
+            car_data += '</ul>'
+
+        function carfunction(values){
+            car_data += '<li>'+ values + '</li>'
+        }
+        document.getElementById('car_data').innerHTML = car_data
     </script>
 </body>
 </html>
