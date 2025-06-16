@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct DOM Insert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    
+    <!-- Best example of using the object in for loop using car -->
+    <div id="gallery" class="flex  flex-col md:flex-row justify-between items-center gap-3 p-2"></div>
+
+    <script>
+      const cards = {
+        card_1: {
+          name: "Mohan",
+          age: 23,
+          links: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=500&h=300&q=80"
+        },
+        card_2: {
+          name: "Gaurav",
+          age: 27,
+          links: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&h=300&q=80"
+        },
+        card_3: {
+          name: "Neha",
+          age: 25,
+          links: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&h=300&q=80"
+        },
+      };
+      const gallery = document.getElementById("gallery");
+
+      Object.entries(cards).forEach(([userKey, userObj]) =>{
+        gallery.innerHTML +=  `<div class="p-3 border border-black rounded-md hover:bg-gray-300">
+            <img src="${userObj.links}" alt="${userObj.name}" />
+            <p class="font-semibold">${userKey}</p>
+            <p> ${userObj.name}</p>
+            </div>`;
+      })
+    </script>
+  </body>
+</html>

@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Direct DOM Insert</title>
   </head>
   <body>
     <div id="gallery"></div>
-    <script>
-      // Lets see the map method power
-      // 1. Create Object
 
+    <script>
       const data = {
         user1: {
           name: "Mohan",
@@ -26,17 +24,17 @@
         },
       };
 
-      // method print user1, user 2 or more users
-      for (let key in data) {
-        console.log("User Key", key);
+      const gallery = document.getElementById("gallery");
 
-        const user = data[key];
-        for (let innerKey in user) {
-          console.log(`${innerKey}: ${user[innerKey]}`);
-        }
+      Object.entries(data).forEach(([userKey, userObj]) => {
+        gallery.innerHTML += `<strong>${userKey}</strong><br>`;
 
-        console.log("-----");
-      }
+        Object.entries(userObj).forEach(([key, value]) => {
+          gallery.innerHTML += `${key}: ${value}<br>`;
+        });
+
+        gallery.innerHTML += `<hr>`;
+      });
     </script>
   </body>
 </html>
