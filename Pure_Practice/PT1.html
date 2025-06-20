@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Paent having a child -->
+    <ul id="fruitsList"></ul>
+
+    <select
+      id="nameDropdown"
+      class="border border-gray-400 p-2 rounded-md w-full md:w-1/3"
+    >
+      <option value="">Select a Name</option>
+    </select>
+
+    <script>
+        // Here we selected the ul tah
+        const list = document.getElementById("fruitsList");
+
+        // Here we create the li item
+        const item = document.createElement("li");
+        item.textContent = "Apple";
+
+        // add new item in the ul tag list
+        list.appendChild(item);
+
+        const dropdown = document.getElementById('nameDropdown');
+
+        async function fetchNameFromAPI(params) {
+          try{
+
+             const response = await fetch("https://api.example.com/names");
+             data = await response.json();
+
+             data
+          }
+
+        }
+    </script>
+  </body>
+</html>
